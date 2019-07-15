@@ -1,0 +1,20 @@
+<!--pages/liangcai/liangci.wxml-->
+<view class='food-jc' wx:for="{{foodlist}}" wx:key="{{index}}">
+   <!-- 图片 -->
+   <view class='food-imgs'>
+   <image class='fodd-jc-img' src='{{item.albums[0]}}' mode='widthFix' lazy-load='true'></image>
+   </view>
+ <!-- 菜谱介绍 -->
+ <view class='food-jc-info'>
+   <!-- 菜名字 -->
+   <view class='food-jc-title'>菜品名：{{item.title}}</view>
+   <!-- 需要材料 -->
+   <view class='fodd-jc-ingredients'>所需食材：{{item.ingredients}}</view>
+   <!-- 需要调料 -->
+   <view class='food-jc-burden'>所需调料：{{item.burden}}</view>
+   <!-- 详情按钮 -->
+   <button  class='food-jc-comment'
+    data-foodid="{{item.id}}"
+    bindtap='jccomment'>详情</button>
+ </view>
+</view>

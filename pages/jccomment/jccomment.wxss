@@ -1,0 +1,51 @@
+/* pages/jccomment/jccomment.wxss */
+.comment{
+  width: 100%
+}
+.jc-img{
+  width: 90%;
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+  padding-left: 35rpx;
+}
+.jc-tetx{
+  font-weight: bold;
+}
+.jc-title{
+  border-bottom: 1rpx solid #ccc;
+  padding-bottom: 10rpx;
+}
+.jc-sc{
+  border-bottom: 1rpx solid #ccc;
+  padding-bottom: 10rpx;
+}
+.jc-tl{
+  border-bottom: 1rpx solid #ccc;
+  padding-bottom: 10rpx
+}
+.jc-js{
+  border-bottom: 1rpx solid #ccc;
+  padding-bottom: 10rpx
+}
+.jc-zz{
+  border-bottom: 1rpx solid #ccc;
+  padding-bottom: 10rpx
+}
+.jc-zz-title{
+  font-weight: bold;
+}
+.jc-zz-is{
+  width: 100%
+}
+.jc-zz-img{
+  width: 40%;
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+  padding-left: 35rpx;
+}
+/* 预览图片 */
+.jc-comment{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+}

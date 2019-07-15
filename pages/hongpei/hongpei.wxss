@@ -1,0 +1,34 @@
+/* pages/hongpei/hongpei.wxss */
+.food-jc{
+  display: flex;
+  padding: 10px;
+}
+/* 食材图片 */
+.food-imgs{
+  width: 30%;
+}
+.fodd-jc-img{
+  width: 90%;
+  margin-right: 20rpx;
+}
+.food-jc-info{
+  flex: 1;
+  line-height: 1.8
+}
+.food-jc-title{
+  font-weight: bold;
+  font-size: 35rpx;
+}
+.fodd-jc-ingredients{
+  font-size: 28rpx;
+}
+.food-jc-burden{
+  font-size: 25rpx;
+}
+.food-jc-comment{
+  height: 60rpx;
+  background: #e54847;
+  color: #fff;
+  font-size: 26rpx;
+  
+}

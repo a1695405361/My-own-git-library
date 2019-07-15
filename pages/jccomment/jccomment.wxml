@@ -1,0 +1,51 @@
+<!--pages/jccomment/jccomment.wxml-->
+<view class='jc'>
+ <!-- 菜品图片 -->
+ <view class='comment'>
+  <image class='jc-img' src="{{foods.albums}}" mode='widthFix' lazy-load='true'></image>
+ </view>
+  <!-- 菜品标题 -->
+  <view class='jc-title'>
+    <text class='jc-tetx'>菜品名字：</text>
+    {{foods.title}}
+  </view>
+  <!-- 需要食材 -->
+  <view class='jc-sc'>
+    <text class='jc-tetx'>需要食材：</text>
+    {{foods.ingredients}}
+  </view>
+  <!-- 需要调料 -->
+  <view class='jc-tl'>
+    <text class='jc-tetx'>所需调料：</text>
+    {{foods.burden}}
+  </view>
+  <!-- 菜品介绍 -->
+  <view class='jc-js'>
+  <text class='jc-tetx'>菜品介绍：</text>
+  {{foods.imtro}}
+  </view>
+
+  <!-- 菜品制作 -->
+  <view class='jc-zz-title'>制作步骤：</view>
+  <view class='jc-zz' wx:for="{{foods.steps}}" wx:key='item'>
+   <text>{{item.step}}</text>
+   <view class='jc-zz-is'>
+   <image class='jc-zz-img' src='{{item.img}}' mode='widthFix' lazy-load='true'></image>
+   </view>
+  </view>
+  <!-- 评价 -->
+  <van-field
+    value="{{ content }}"
+    placeholder="请评论一下吧~亲"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+  <!-- 上传图片 -->
+  <van-button type="warning" size='large' bindtap='uploadImg'>上传图片</van-button>
+  <!-- 上传图片列表 -->
+  <view>
+   <image class='jc-comment' wx:for="{{images}}" wx:key="{{index}}" src="{{item}}"></image>
+   <van-button type="info" size='large' bindtap='submit'>提交评价</van-button>
+   <van-button type="danger" size='large'>收藏</van-button>
+  </view>
+</view>

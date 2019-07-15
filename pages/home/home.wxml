@@ -1,0 +1,32 @@
+<!--pages/home/home.wxml-->
+<view>
+<view class='home-tou'>
+<view class='home-tou-wz'>爱好美食</view>
+</view>
+<!-- 轮播图 -->
+<view class='home-lb'>
+  <swiper autoplay="{{autoplay}}" interval="{{interval}}" indicator-dots='true' indicator-color='rgba(255,255,255,0.3)' indicator-active-color='#a8dbd0' circular='true' duration='1000'>
+      <!--1.data：定义list autoplay interval  -->
+      <swiper-item wx:for="{{imglist}}" wx:key="index"> 
+         <image class='home-lb-img' src="{{item.url}}" lazy-load='true' mode='aspectFill' data-color='{{item.color}}'></image>
+      </swiper-item>
+  </swiper>
+</view>
+<!-- 9宫格 -->
+<view class="container">
+    <view class="weui-grids">
+        <view class="weui-grid" wx:for="{{routers}}" wx:key="name">
+            <navigator url="{{item.url+'?name='+item.name+'&code='+item.code}}">
+                <view class='weui-grid__bg'>
+                    <view class="weui-grid__icon">
+                        <image src="../../images/cc.png" mode="scaleToFill" />
+                    </view>
+                    <text class="weui-grid__label">{{item.name}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+  </view>
+
+
+</view>

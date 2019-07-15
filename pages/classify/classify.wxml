@@ -1,0 +1,34 @@
+<!--pages/classify/classify.wxml-->
+<view>
+<!-- 搜索 -->
+  <view class='home-tou'>
+  <view class='home-tou-wz'>爱好美食</view>
+  <van-search
+  placeholder="今天吃点什么"
+  use-action-slot
+  bind:search="onSearch"
+  background="#9966FF"
+  shape="round"
+>
+ <view slot="action" bindtap="onSearch">搜索</view>
+</van-search>
+  </view>
+  <!-- 显示搜索内容 -->
+  <view class='food-jc' wx:for="{{ssfoodlist}}" wx:key="{{index}}">
+   <!-- 图片 -->
+   <image class='fodd-jc-img' src='{{item.albums[0]}}'></image>
+ <!-- 菜谱介绍 -->
+ <view class='food-jc-info'>
+   <!-- 菜名字 -->
+   <view class='food-jc-title'>菜品名：{{item.title}}</view>
+   <!-- 需要材料 -->
+   <view class='fodd-jc-ingredients'>所需食材：{{item.ingredients}}</view>
+   <!-- 需要调料 -->
+   <view class='food-jc-burden'>所需调料：{{item.burden}}</view>
+   <!-- 详情按钮 -->
+   <button  class='food-jc-comment'
+    data-foodid="{{item.id}}"
+    bindtap='jccomment'>详情</button>
+ </view>
+</view>
+</view>
